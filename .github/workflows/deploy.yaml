@@ -14,7 +14,7 @@ jobs:
       - name: Set repos option to match thinkr dev env
         run: bash dev/ci/set_repos_option_to_match_thinkr_dev_env.sh
 
-     - name: Install application dependencies
+      - name: Install application dependencies
        run: |
           install.packages("pak")
           pak::local_install(upgrade = FALSE, dependencies = TRUE)
