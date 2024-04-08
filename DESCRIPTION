@@ -1,0 +1,42 @@
+Package: poc.gh.migration
+Title: PKG_TITLE
+Version: 0.0.0.9000
+Authors@R: person('AUTHOR_FIRST', 'AUTHOR_LAST', email = 'AUTHOR@MAIL.COM', role = c('cre', 'aut'))
+Description: PKG_DESC.
+License: MIT + file LICENSE
+Imports: 
+    cli,
+    config (>= 0.3.1),
+    dplyr,
+    glue,
+    golem (>= 0.3.5),
+    here,
+    htmltools,
+    jsonlite,
+    leaflet,
+    lubridate,
+    purrr,
+    readr,
+    readxl,
+    scales,
+    sf,
+    shiny (>= 1.7.3),
+    shinyWidgets,
+    stats,
+    tibble,
+    tidygeocoder,
+    tidyr,
+    tidyselect,
+    tools,
+    waiter
+Suggests: 
+    DT,
+    knitr,
+    rmarkdown,
+    rstudioapi,
+    stringr,
+    testthat (>= 3.0.0),
+    writexl
+Encoding: UTF-8
+LazyData: true
+RoxygenNote: 7.1.1
