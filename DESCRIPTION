@@ -15,6 +15,7 @@ Imports:
     jsonlite,
     leaflet,
     lubridate,
+    pkgload,
     purrr,
     readr,
     readxl,
