@@ -21,11 +21,11 @@ jobs:
         shell: Rscript {0}
 
       - name: Deploy application
-        env:
+        with:
           SHINYAPPS_IO_NAME: ${{ env.SHINYAPPS_IO_NAME }}
           SHINYAPPS_IO_TOKEN: ${{ secrets.SHINYAPPS_IO_TOKEN }}
           SHINYAPPS_IO_SECRET: ${{ secrets.SHINYAPPS_IO_SECRET }}
-        run: Rscript dev/ci/deploy_app.R
+          script: Rscript dev/ci/deploy_app.R
 
 
       
