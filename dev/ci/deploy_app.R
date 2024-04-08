@@ -1,15 +1,14 @@
-
 cli::cat_rule("Connect to shinyapps.io account")
 
 rsconnect::setAccountInfo(
-  name = "prevention",
+  name = Sys.getenv("SHINYAPPS_IO_NAME"),
   token = Sys.getenv("SHINYAPPS_IO_TOKEN"),
   secret = Sys.getenv("SHINYAPPS_IO_SECRET")
 )
 
 # Keep only relevant files
 
-file_to_ignore_regex <-  c(
+file_to_ignore_regex <- c(
   ".Rprofile$",
   "^.Renviron$",
   "renv/",
@@ -43,7 +42,7 @@ get_current_git_branch <- function() {
 app_name_base <- basename(normalizePath("."))
 current_git_branch <- get_current_git_branch()
 
-switch (
+switch(
   EXPR = current_git_branch,
   "main" = paste0(app_name_base, "-dev"),
   "uat" = paste0(app_name_base, "-uat"),
