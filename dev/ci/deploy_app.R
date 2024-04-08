@@ -1,5 +1,9 @@
 cli::cat_rule("Connect to shinyapps.io account")
 
+stopifnot(Sys.getenv("SHINYAPPS_IO_NAME") != "")
+stopifnot(Sys.getenv("SHINYAPPS_IO_TOKEN") != "")
+stopifnot(Sys.getenv("SHINYAPPS_IO_SECRET") != "")
+
 rsconnect::setAccountInfo(
   name = Sys.getenv("SHINYAPPS_IO_NAME"),
   token = Sys.getenv("SHINYAPPS_IO_TOKEN"),
