@@ -1,0 +1,25 @@
+on:
+  push:
+    branches: [main, uat, production, test-ci]
+
+name: deploy
+  deploy:
+    runs-on: ubuntu-latest
+    container: rocker/geospatial:4.3.2
+    steps:
+      - uses: actions/checkout@v4
+      
+      - name: Set repos option to match thinkr dev env
+        run: bash dev/ci/set_repos_option_to_match_thinkr_dev_env.sh
+
+     - name: Install application dependencies
+       run: |
+          install.packages("pak")
+          pak::local_install(upgrade = FALSE, dependencies = TRUE)
+        shell: Rscript {0}
+
+      - name: Deploy application
+        run: Rscript dev/ci/deploy_app.R
+
+
+      

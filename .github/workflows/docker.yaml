@@ -1,5 +1,3 @@
-# Workflow derived from https://github.com/r-lib/actions/tree/v2/examples
-# Need help debugging build failures? Start at https://github.com/r-lib/actions#where-to-find-help
 on: [push]
 
 name: check
@@ -14,7 +12,8 @@ jobs:
       - name: Set repos option to match thinkr dev env
         run: bash dev/ci/set_repos_option_to_match_thinkr_dev_env.sh
 
-      - run: |
+      - name: Install application dependencies
+        run: |
           install.packages("pak")
           pak::local_install(upgrade = FALSE, dependencies = TRUE)
           rcmdcheck::rcmdcheck(args = c("--no-manual"), error_on = "warning", check_dir = "check")
