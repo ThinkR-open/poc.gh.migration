@@ -3,6 +3,8 @@ on:
     branches: [main, uat, production, test-ci]
 
 name: deploy
+
+jobs:
   deploy:
     runs-on: ubuntu-latest
     container: rocker/geospatial:4.3.2
