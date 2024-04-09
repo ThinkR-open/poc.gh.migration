@@ -9,19 +9,10 @@ jobs:
     - name: Set up Python
       uses: actions/setup-python@v5
       with:
-        python-version: 3.8
+        python-version: 3.10
         
     - name: Test env vars for python
-      run: |
-        import os
-        if 'ENVVAR' in os.environ:
-          print('ENVVAR is defined')
-        else:
-          print('ENVVAR is not defined')
-        if 'SECRET' in os.environ:
-          print('SECRET is defined')
-        else:
-          print('SECRET is not defined')
+      run: python dev/ci/test_env_var_defined.py 
       env:
         ENVVAR: ${{ env.ENVVAR }} 
         SECRET: ${{ env.SECRET }} 
