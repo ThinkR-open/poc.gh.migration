@@ -1,5 +1,5 @@
 default:
-  golem_name: poc.gh.migration
+  golem_name: pocghmigration
   golem_version: 0.0.0.9000
   app_prod: no
 production:

@@ -46,7 +46,7 @@ usethis::use_test("app")
 # Documentation
 
 ## Vignette ----
-usethis::use_vignette("poc.gh.migration")
+usethis::use_vignette("pocghmigration")
 devtools::build_vignettes()
 
 ## Code Coverage----
