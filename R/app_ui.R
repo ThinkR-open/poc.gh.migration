@@ -10,7 +10,8 @@ app_ui <- function(request) {
     golem_add_external_resources(),
     # Your application UI logic
     fluidPage(
-      h1("pocghmigration")
+      h1("Victory!!"),
+      img(src = "https://i.kym-cdn.com/photos/images/newsfeed/002/402/107/339")
     )
   )
 }
