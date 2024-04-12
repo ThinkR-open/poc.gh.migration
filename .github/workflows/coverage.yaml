@@ -10,6 +10,7 @@ jobs:
     container: rocker/geospatial:4.3.2
     env:
       GITHUB_PAT: ${{ secrets.GITHUB_TOKEN }}
+      CODEDOV_TOKEN: ${{ secrets.CODECOVTOKEN }}
 
     steps:
       - uses: actions/checkout@v4
