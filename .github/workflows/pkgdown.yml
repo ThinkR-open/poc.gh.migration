@@ -23,6 +23,9 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
+      - name: Install system dependencies Linux
+        run: sudo apt-get update -qq && apt-get rsync
+
       - name: Set repos option to match thinkr dev env
         run: bash dev/ci/set_repos_option_to_match_thinkr_dev_env.sh
 
