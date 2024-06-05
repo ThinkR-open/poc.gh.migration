@@ -2,3 +2,5 @@ url: https://thinkr-open.github.io/pocghmigration/
 template:
   bootstrap: 5
 
+development:
+  mode: auto
